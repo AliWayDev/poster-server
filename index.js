@@ -4,7 +4,7 @@ import ms from "mongoose";
 import Post from "./Post.js";
 import router from "./Router.js";
 
-const PORT = 8050;
+const PORT = process.env.PORT || 5000;
 const DB_URL =
   "mongodb+srv://alinur:909074402@cluster0.gzcfe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
