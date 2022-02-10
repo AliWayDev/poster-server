@@ -3,7 +3,7 @@ import Post from "./Post.js";
 class PostService {
   async create(post) {
     const createdPost = await Post.create(post);
-    return res.status(200).json(createdPost);
+    return createdPost;
   }
 
   async getAll() {
@@ -29,11 +29,11 @@ class PostService {
   }
 
   async delete(id) {
-      if (!id) {
-        throw new Error("Id не указан!");
-      }
-      const post = await Post.findByIdAndDelete(id);
-      return post;
+    if (!id) {
+      throw new Error("Id не указан!");
+    }
+    const post = await Post.findByIdAndDelete(id);
+    return post;
   }
 }
 

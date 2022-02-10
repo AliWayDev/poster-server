@@ -1,5 +1,6 @@
 import Router from "express";
 import PostController from "./PostController.js";
+import cors from 'cors';
 
 const router = new Router();
 

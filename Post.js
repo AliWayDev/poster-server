@@ -1,10 +1,10 @@
-import ms from 'mongoose';
+import ms from "mongoose";
 
 const Post = new ms.Schema({
-    author: {type: String, required: true},
-    title: {type: String, required: true},
-    content: {type: String, required: true},
-    picture: {type: String}, 
-})
+  author: { type: String },
+  title: { type: String },
+  content: { type: String },
+  picture: { type: String },
+});
 
-export default ms.model('Post', Post)
+export default ms.model("Post", Post);

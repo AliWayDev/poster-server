@@ -1,10 +1,10 @@
-import Post from "./Post.js";
 import PostService from "./PostService.js";
 
 class PostController {
   async create(req, res) {
     try {
-      const post = await PostService.create(req.body);
+      const obj = req.body;
+      const post = await PostService.create(obj);
       res.status(200).json(post);
     } catch (e) {
       res.status(500).json(e);
@@ -14,7 +14,7 @@ class PostController {
   async getAll(req, res) {
     try {
       const posts = await PostService.getAll();
-      return res.json(posts); 
+      return res.json(posts);
     } catch (e) {
       res.status(500).json(e);
     }
