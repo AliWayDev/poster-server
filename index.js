@@ -22,7 +22,7 @@ app.use("/api", router);
 async function run() {
   try {
     await ms.connect(DB_URL);
-    app.listen(PORT, () =>
+    app.listen(process.env.PORT || PORT, () =>
       console.log("Server has been started! " + "Port: " + PORT)
     );
   } catch (e) {
